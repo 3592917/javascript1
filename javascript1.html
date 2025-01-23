@@ -1,0 +1,49 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let titulo = document.getElementById("titulo");
+      console.log(titulo);
+      let count = 0;
+
+      function sumar() {
+        count += 1;
+        actualizarContador();
+      }
+      function restar() {
+        count -= 1;
+        actualizarContador();
+      }
+
+      function actualizarContador() {
+        let contador = document.getElementById("count");
+        contador.textContent = "Contador: " + count;
+        console.log(count);
+      }
+
+      let contador = document.getElementById("count");
+      function cambiarColor() {
+        let mensaje = document.getElementById("mensaje");
+        if (mensaje.style.color === "blue") {
+          mensaje.style.color = "red";
+          mensaje.style.fontSize = "40px";
+        } else {
+          mensaje.style.color = "blue";
+          mensaje.style.fontSize = "20px";
+        }
+      }
+    </script>
+
+    <h1 id="titulo">Holi</h1>
+    <button onclick="sumar()">Suma</button>
+    <button onclick="restar()">Resta</button>
+    <h2 id="count">Contador:</h2>
+    <p id="mensaje">Texto de ejemplo</p>
+    <button onclick="cambiarColor()">Cambiar Color</button>
+    <script></script>
+  </body>
+</html>
